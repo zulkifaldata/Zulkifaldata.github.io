@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Waseem – Full Stack Web Developer</title>
+<meta name="description" content="Waseem is a full stack web developer who builds simple, fast websites for small businesses. WordPress, social media management, digital marketing and freelancing support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  --paper:#E9EEFB; --surface:#FFFFFF; --ink:#12183A; --muted:#505779; --line:#CBD1E4;
+  --cobalt:#2B4BDB; --marker:#FFD23F; --onmarker:#12183A;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--paper:#0F1430;--surface:#171E4A;--ink:#EEF0FA;--muted:#A3AAD0;--line:#2A3262;--cobalt:#8EA2FF;--marker:#FFD23F;--onmarker:#12183A}
+}
+:root[data-theme="dark"]{--paper:#0F1430;--surface:#171E4A;--ink:#EEF0FA;--muted:#A3AAD0;--line:#2A3262;--cobalt:#8EA2FF;--marker:#FFD23F;--onmarker:#12183A}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+header{position:absolute;inset:0 0 auto 0;z-index:2;padding:1.25rem 0;border-bottom:1px solid rgba(255,255,255,.14)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.brand{font:800 1.15rem "Bricolage Grotesque",sans-serif;color:#fff;text-decoration:none}
+nav a{color:#C9D0F5;text-decoration:none;margin-left:1.1rem;font-size:.95rem}
+nav a:hover,nav a:focus-visible{color:#FFD23F}
+header a:focus-visible{outline-color:#FFD23F}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+.hero{padding:3.5rem 0 3rem;display:grid;gap:2rem;align-items:center}
+@media (min-width:46rem){.hero{grid-template-columns:1.15fr 1fr;padding:4.5rem 0 3.5rem}.wrap{max-width:62rem}}
+.art{margin:0;width:100%;max-width:26rem;justify-self:center}
+.art svg{display:block;width:100%;height:auto}
+@media (prefers-reduced-motion:no-preference){.fl{animation:fl 7s ease-in-out infinite}.fl2{animation-delay:-3s}.fl3{animation-delay:-5s}}
+@keyframes fl{50%{transform:translateY(-8px)}}
+.svc{display:grid;grid-template-columns:3.25rem 1fr;column-gap:1rem;align-items:start}
+.svc .ico{grid-row:1/3;width:3.25rem;height:3.25rem}
+.top{--paper:#FFFFFF;--ink:#12183A;--line:#CBD1E4;--muted:#B9C2F0;--cobalt:#4C6BFF;--marker:#FFD23F;position:relative;overflow:hidden;color:#fff;padding-top:4.5rem;border-radius:0 0 2.5rem 2.5rem;background:radial-gradient(48rem 26rem at 88% 8%,rgba(76,107,255,.6),transparent 62%),radial-gradient(34rem 22rem at 4% 100%,rgba(255,210,63,.2),transparent 62%),linear-gradient(160deg,#0A0F2E 0%,#131B4C 55%,#1C2C7E 100%)}
+.top::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.16) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:linear-gradient(to bottom,#000,transparent 85%);mask-image:linear-gradient(to bottom,#000,transparent 85%);pointer-events:none}
+.top>.wrap{position:relative}
+.top .hero{padding-top:1rem;padding-bottom:5rem}
+.top .btn{background:var(--marker);color:#12183A}
+.sheet{position:relative;background:var(--surface);border-radius:1.5rem;padding:0 1.5rem;margin-top:-2.5rem;box-shadow:0 24px 60px rgba(18,24,58,.14)}
+.sheet section:first-child{border-top:0}
+.hero h1{font-size:clamp(2.6rem,9vw,5rem);font-weight:800;letter-spacing:-.02em;max-width:14ch}
+.hero h1 span{color:var(--marker)}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:34rem;margin:1.5rem 0 2rem}
+.btn{display:inline-block;background:var(--cobalt);color:#fff;font:700 1rem "Bricolage Grotesque",sans-serif;padding:.9rem 1.5rem;border-radius:.5rem;text-decoration:none}
+:root[data-theme="dark"] .btn{color:#0F1430}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#0F1430}}
+.btn:hover{filter:brightness(1.08)}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font-size:1.9rem;font-weight:700;margin-bottom:1.5rem}
+.row{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row h3{font-size:1.25rem;font-weight:700;margin-bottom:.25rem}
+.row p{margin:0;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0 0 1.5rem;list-style:none}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:.3rem .9rem;font-size:.95rem}
+.certs{margin:0;padding-left:1.1rem;color:var(--muted)}
+.certs li{margin:.35rem 0}.certs b{color:var(--ink);font-weight:500}
+.status{display:inline-block;background:var(--marker);color:var(--onmarker);font-weight:500;font-size:.85rem;padding:.1rem .6rem;border-radius:999px;margin-left:.5rem;vertical-align:middle}
+.contact p{color:var(--muted);max-width:32rem;margin:0 0 1.5rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:30rem){nav a:first-child{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="#top">Waseem</a>
+  <nav aria-label="Main"><a href="#services">Services</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<div class="top"><div class="wrap">
+  <div class="hero"><div class="hero-text">
+    <h1>I build websites that <span>work for you.</span></h1>
+    <p>I’m Waseem, a full stack web developer. I build simple, fast websites for small businesses and help them get found online.</p>
+    <a class="btn" href="mailto:zulkifal.data@gmail.com?subject=Website%20enquiry">Email me</a></div>
+    <figure class="art">
+<svg viewBox="0 0 400 340" role="img" aria-label="Illustration of a young web developer smiling next to a website preview">
+<circle cx="200" cy="175" r="150" fill="var(--marker)"/>
+<path d="M105 340 C105 272 148 246 200 246 C252 246 295 272 295 340 Z" fill="var(--cobalt)"/>
+<path d="M178 246 L200 282 L222 246 Z" fill="#F3D9C4"/>
+<rect x="186" y="222" width="28" height="30" rx="10" fill="#D4926A"/>
+<circle cx="200" cy="190" r="44" fill="#E0A37A"/>
+<ellipse cx="157" cy="194" rx="7" ry="11" fill="#D4926A"/><ellipse cx="243" cy="194" rx="7" ry="11" fill="#D4926A"/>
+<path d="M154 188 C150 138 250 138 246 188 C236 166 214 160 196 164 C178 160 162 168 154 188 Z" fill="#1E1B2E"/>
+<circle cx="184" cy="192" r="4.5" fill="#1E1B2E"/><circle cx="216" cy="192" r="4.5" fill="#1E1B2E"/>
+<path d="M184 210 Q200 224 216 210" fill="none" stroke="#1E1B2E" stroke-width="4" stroke-linecap="round"/>
+<g class="fl"><rect x="238" y="52" width="146" height="104" rx="10" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+<path d="M238 62 a10 10 0 0 1 10 -10 h126 a10 10 0 0 1 10 10 v14 h-146 Z" fill="var(--ink)"/>
+<circle cx="252" cy="64" r="3.5" fill="var(--marker)"/><circle cx="264" cy="64" r="3.5" fill="var(--cobalt)"/><circle cx="276" cy="64" r="3.5" fill="var(--paper)"/>
+<rect x="252" y="90" width="70" height="10" rx="5" fill="var(--ink)"/>
+<rect x="252" y="108" width="112" height="6" rx="3" fill="var(--line)"/><rect x="252" y="120" width="92" height="6" rx="3" fill="var(--line)"/>
+<rect x="252" y="134" width="44" height="12" rx="6" fill="var(--cobalt)"/></g>
+<g class="fl fl2"><rect x="20" y="128" width="88" height="60" rx="10" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+<path d="M44 150 L36 158 L44 166 M84 150 L92 158 L84 166 M66 146 L58 170" fill="none" stroke="var(--cobalt)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<circle cx="200" cy="175" r="165" fill="none" stroke="var(--cobalt)" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+<rect x="132" y="270" width="136" height="70" rx="8" fill="var(--ink)"/><circle cx="200" cy="305" r="9" fill="var(--marker)"/>
+<g class="fl fl3"><rect x="290" y="200" width="92" height="46" rx="23" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/><path d="M318 234C304 224 304 214 312 214C315 214 317 216 318 218C319 216 321 214 324 214C332 214 332 224 318 234Z" fill="#E5484D"/><rect x="340" y="216" width="28" height="6" rx="3" fill="var(--line)"/><rect x="340" y="227" width="18" height="6" rx="3" fill="var(--line)"/></g>
+<g class="fl"><rect x="22" y="212" width="92" height="60" rx="10" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/><rect x="38" y="244" width="12" height="16" rx="2" fill="var(--cobalt)"/><rect x="58" y="234" width="12" height="26" rx="2" fill="var(--cobalt)"/><rect x="78" y="224" width="12" height="36" rx="2" fill="var(--ink)"/></g>
+<path d="M356 18l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="var(--cobalt)"/><path d="M52 62l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fff"/><circle cx="96" cy="34" r="5" fill="var(--marker)" stroke="var(--ink)" stroke-width="2"/>
+</svg>
+    </figure>
+  </div></div></div>
+<div class="wrap"><div class="sheet">
+  <section id="services">
+    <h2>Services</h2>
+    <div class="row svc"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><rect x="3" y="8" width="46" height="36" rx="7" fill="var(--cobalt)"/><rect x="3" y="8" width="46" height="10" rx="5" fill="var(--ink)"/><rect x="10" y="25" width="20" height="6" rx="3" fill="var(--paper)"/><rect x="10" y="35" width="30" height="4" rx="2" fill="var(--marker)"/></svg><h3>WordPress websites</h3><p>A clear, mobile-friendly site for your business, set up so you can edit it yourself.</p></div>
+    <div class="row svc"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><rect x="3" y="3" width="46" height="46" rx="10" fill="var(--marker)"/><rect x="11" y="30" width="7" height="12" rx="2" fill="var(--ink)"/><rect x="23" y="22" width="7" height="20" rx="2" fill="var(--ink)"/><rect x="35" y="11" width="7" height="31" rx="2" fill="var(--cobalt)"/></svg><h3>Digital marketing basics</h3><p>Social profiles, search basics and simple content so customers can find you.</p></div>
+    <div class="row svc"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23" fill="var(--ink)"/><circle cx="26" cy="20" r="7" fill="var(--marker)"/><path d="M12 40 C12 31 19 28 26 28 C33 28 40 31 40 40 Z" fill="var(--cobalt)"/></svg><h3>Freelancing support</h3><p>Help with setting up your profile, writing proposals and delivering online work.</p></div>
+    <div class="row svc"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><path d="M8 6h36a5 5 0 0 1 5 5v20a5 5 0 0 1-5 5H27l-10 9v-9H8a5 5 0 0 1-5-5V11a5 5 0 0 1 5-5z" fill="var(--cobalt)"/><path d="M26 30C15 22 15 13 21 13c2.500 0 4 1.500 5 3.500C27 14.500 28.500 13 31 13c6 0 6 9-5 17z" fill="var(--marker)"/></svg><h3>Social media management</h3><p>I run your accounts as your assistant: posting, replies and tracking. I also find the gaps in how your business shows up online and fix them.</p></div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills and certificates</h2>
+    <ul class="tags"><li>Full stack development</li><li>Social media management</li><li>Node.js</li><li>Databases</li><li>HTML</li><li>CSS</li><li>WordPress</li><li>Digital marketing</li><li>Cybersecurity basics</li><li>Networking</li></ul>
+    <ul class="certs">
+      <li><b>Freelancing, Digital Literacy, WordPress, Digital Marketing</b> – Digiskills.pk</li>
+      <li><b>Cybersecurity</b> – Cisco Networking Academy</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="row"><h3>Personal Site<span class="status">Live</span></h3><p>This page. Built with HTML and CSS, hosted free, and designed to work well on a phone.</p></div>
+    <div class="row"><h3>More coming soon</h3><p>I’m adding new projects as I build them. Check back, or email me about yours.</p></div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let’s talk</h2>
+    <p>Tell me what you need and I’ll reply by email.</p>
+    <a class="btn" href="mailto:zulkifal.data@gmail.com?subject=Website%20enquiry">Email me</a>
+  </section>
+</div></div>
+</main>
+
+<footer><div class="wrap">© <span id="y">2026</span> Waseem</div></footer>
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
